@@ -1,0 +1,23 @@
+{
+  "name": "symlinksync",
+  "version": "0.0.1",
+  "description": "Sync to another drive, leaving symlinks",
+  "bin": "index.js",
+  "scripts": {
+	"test": "echo \"Error: no test specified\" && exit 1",
+	"build": "pkg . -t node10-macos-x64 -o symlinksync-osx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vandijkstef/symlinksync.git"
+  },
+  "author": "Stef van Dijk",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/vandijkstef/symlinksync/issues"
+  },
+  "homepage": "https://github.com/vandijkstef/symlinksync#readme",
+  "dependencies": {
+    "checksum": "^0.1.1"
+  }
+}
