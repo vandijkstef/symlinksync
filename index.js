@@ -6,7 +6,7 @@ const readline = require('readline');
 const checksum = require('checksum');
 const cs = checksum('dshaw');
 
-// Get config file - // TODO: Test if this properly passes in building
+// Get config file
 const config = {
 	"source": "",
 	"dest": "",
@@ -93,24 +93,24 @@ function testCreateFile(filePath, config) {
 		fs.copyFileSync(filePath, dest);
 		checkFiles(filePath, dest)
 			.then(() => {
-				console.log('same new', dest);
+				// console.log('same new', dest);
 				if (config.clearHDD) {
 					createSymlink(filePath, dest);
 				}
 			})
 			.catch(() => {
-				console.log('noddasame new', dest);
+				// console.log('noddasame new', dest);
 			});
 	} else {
 		checkFiles(filePath, dest)
 			.then(() => {
-				console.log('same exists', dest);
+				// console.log('same exists', dest);
 				if (config.clearHDD) {
 					createSymlink(filePath, dest);
 				}
 			})
 			.catch(() => {
-				console.log('noddasame exists', dest);
+				// console.log('noddasame exists', dest);
 			});
 	}
 }
@@ -206,8 +206,6 @@ rl.question('Do you want to clear hard-drive space? (y|n) ', (answer) => {
 	doIt(config);
 });
 
-// afterwards, or if it does, checksum both files, note we are creating symlinks at some point
-	// if it's invalid its probably wise to delete the file at dest and retry copying
-	// if it's valid we can delete from source and create a symlink for it
-
-// console.log('Configdata', config);
+// TODO:
+// if it's checksum its probably wise to delete the file at dest and retry copying
+// Create log file
