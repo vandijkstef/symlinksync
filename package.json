@@ -1,6 +1,6 @@
 {
   "name": "symlinksync",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Sync to another drive, leaving symlinks",
   "bin": "index.js",
   "scripts": {
